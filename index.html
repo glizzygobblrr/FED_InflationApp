@@ -11,8 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rock+Salt&display=swap" rel="stylesheet">
     <title>Home</title>
     <style> 
+        .container{
+            
+        }
 
+        /*NavBar ---------------------*/
         nav {
+            position: sticky;
+            grid-row: 1;
             display: flex;
             padding: 25px;
             box-sizing: border-box;
@@ -57,12 +63,24 @@
             text-align: center;
             font-family: 'Rock Salt', cursive;
         }
+
+        h1{
+            color: black;
+        }
+
+        /*Home Content---------------------*/
+        .homepage-content h1{
+            
+        }
+
+       
     </style>
 
 </head>
 
 <body>
-
+<div class="container">
+<!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container-fluid">
         <div class="nav-section left">
@@ -91,5 +109,12 @@
         </div>
     </div>
 </nav>
+
+<!--Home Page-->
+<div class="homepage-content" style="height: 100vh">
+        <h1>Test</h1>
+</div>
+
+</div>
 </body>
 </html>
