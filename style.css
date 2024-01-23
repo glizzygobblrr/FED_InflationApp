@@ -1,0 +1,108 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+      *
+      {
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+          font-family: 'Poppins', sans-serif;
+      }
+
+      nav {
+          display: flex;
+          padding: 25px;
+          box-sizing: border-box;
+          background-color: white;
+      }
+
+      nav > .nav-section {
+          padding: 3rem 2rem;
+          display: flex;
+          gap: 1rem;
+
+      }
+
+      .left {
+          margin-right: auto;
+      }
+
+      nav ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      nav li{
+          display: inline-block;
+          margin-right: 20px;
+      }
+
+      nav a{
+          text-decoration: none;
+          color: black;
+          padding: 10px 10px;
+          font-size: 30px;
+          font-family: 'Poppins', sans-serif;
+          border-radius: 15px;
+      }
+
+      nav a:hover{
+          background-color: grey;
+      }
+    
+      .content {
+          margin-top: 40vh;
+          padding: 30px;
+      }
+
+      h1{
+          font-size: 14vh;
+          font-weight: 700;
+          color: white;
+          position: relative;
+          text-transform: uppercase;
+      }
+
+      h1::before {
+          content: attr(data-text);
+          position: absolute;
+          font-weight: 700;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          color: black;
+          border-right: 2px solid grey;
+          overflow: hidden;
+          animation: animate 6s linear infinite;
+      }
+
+      @keyframes animate {
+          0%,10%,100%
+          {
+              width: 0%;
+          }
+          70%{
+              width: 100%;
+          }
+      }
+
+      body{
+          display: flex;
+          justify-content: center;  
+          align-items: center;
+          min-height: 100vh;
+          background: white;
+      }
+
+      #container {
+          height: 100%;
+          overflow: hidden;
+      }
+
+      section {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          scroll-snap-type: y mandatory;
+          margin-top: 10vh;
+      }
