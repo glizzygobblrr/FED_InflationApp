@@ -1,108 +1,120 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-      *
-      {
-          margin:0;
-          padding:0;
-          box-sizing:border-box;
-          font-family: 'Poppins', sans-serif;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
 
-      nav {
-          display: flex;
-          padding: 25px;
-          box-sizing: border-box;
-          background-color: white;
-      }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  background-color: #333;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
 
-      nav > .nav-section {
-          padding: 3rem 2rem;
-          display: flex;
-          gap: 1rem;
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  border-radius: 15px;
+}
 
-      }
+nav a:hover {
+  background-color: grey;
+}
 
-      .left {
-          margin-right: auto;
-      }
+.ds-container,
+.info-container,
+.map-container,
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  margin-top: 100px;
+  padding: 15%;
+  text-align: center;
+}
 
-      nav ul{
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-      }
+.info-container {
+  height: 330vh;
+}
 
-      nav li{
-          display: inline-block;
-          margin-right: 20px;
-      }
+h1 {
+  font-size: 6em;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-      nav a{
-          text-decoration: none;
-          color: black;
-          padding: 10px 10px;
-          font-size: 30px;
-          font-family: 'Poppins', sans-serif;
-          border-radius: 15px;
-      }
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: black;
+  border-right: 2px solid grey;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+  white-space: nowrap;
+}
 
-      nav a:hover{
-          background-color: grey;
-      }
-    
-      .content {
-          margin-top: 40vh;
-          padding: 30px;
-      }
+h2 {
+  font-size: 55px;
+  color: black;
+}
 
-      h1{
-          font-size: 14vh;
-          font-weight: 700;
-          color: white;
-          position: relative;
-          text-transform: uppercase;
-      }
+h3 {
+  color: white;
+  margin-top: 1vh;
+  font-size: 24px;
+  color: black;
+}
 
-      h1::before {
-          content: attr(data-text);
-          position: absolute;
-          font-weight: 700;
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 100%;
-          color: black;
-          border-right: 2px solid grey;
-          overflow: hidden;
-          animation: animate 6s linear infinite;
-      }
+h4 {
+  font-size: 35px;
+  color: black;
+  margin-top: 4vh;
+}
 
-      @keyframes animate {
-          0%,10%,100%
-          {
-              width: 0%;
-          }
-          70%{
-              width: 100%;
-          }
-      }
+h5 {
+  font-size: 70px;
+  color: black;
+}
 
-      body{
-          display: flex;
-          justify-content: center;  
-          align-items: center;
-          min-height: 100vh;
-          background: white;
-      }
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
 
-      #container {
-          height: 100%;
-          overflow: hidden;
-      }
+  60% {
+    width: 100%;
+  }
+}
 
-      section {
-          height: 100%;
-          width: 100%;
-          position: relative;
-          scroll-snap-type: y mandatory;
-          margin-top: 10vh;
-      }
+.content {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
