@@ -60,7 +60,11 @@
           color: white;
           position: relative;
           text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
       }
+
+      
 
       h1::before {
           content: attr(data-text);
@@ -88,10 +92,18 @@
 
       body{
           display: flex;
-          justify-content: center;  
+          justify-content: left;  
           align-items: center;
           min-height: 100vh;
           background: white;
+          padding: 40px;
+      }
+
+      p {
+        position: absolute;
+        bottom: 180px;
+        left: 50px;
+        font-size: 3vh;
       }
 
       #container {
