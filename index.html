@@ -1,44 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <title>CSS Text Animation Effects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.js"></script>
+  <link rel ="stylesheet" href="style.css" />
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-white fixed-top">
-      <div class="container-fluid">
-          <div class="nav-section left">
-              <div class="navbar-brand" href="#" style="font-size: 30px; margin-left:10px;">INFLATION ATLAS</div>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#section2">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#section3">Information</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="#section4" role="button" data-bs-toggle="dropdown" aria expanded="false">
-                          Map
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#section5">Account</a>
-                  </li>
-              </ul>
-          </div>
+    <div class="container-fluid">
+      <div class="nav-section left">
+        <div class="navbar-brand" href="#" style="font-size: 30px; margin-left:10px;">INFLATION ATLAS</div>
       </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a onclick="scrollToSection('ds-container')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="scrollToSection('info-container')">Info</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="scrollToSection('map-container')">Map</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="scrollToSection('account-container')">Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <h1 data-text = "Welcome!">Welcome!</h1>
+  <div id="ds-container" class="ds-container">
+    <h1 data-text="Dollars & Sense">Dollars & Sense</h1>
+    </div>
+  </div>
+
+  <div id="info-container" class="info-container">
+    <h5>Information</h5>
+    <div id="lottie-container1" style="width: 300px; height: 300px; margin-top: 4vh;"></div>
+    <h2>What is Inflation?</h2>
+    <h3>Inflation is the rate of increase in prices over 
+    a given period of time. It is typically a broad measure, such 
+    as the overall increase in prices or the increase in the cost of living in a country.</h3>
+    <div id = "lottie-container4" style="width: 300px; height: 300px;"></div>
+    <h2>Causes of Inflation</h2>
+    <h3>When demand for goods and services outpaces the available supply, 
+    availability of certain goods and services becomes constrained,
+    resulting in inflationary pressures.</h3>
+    <h2 style="margin-top: 15vh;">Effects of Inflation</h2>
+    <ul>
+      <li><h3>The rise in prices over time reduces the purchasing power of consumers since a fixed amount of money will afford progressively less consumption.</h3></li>
+      <li><h3 style="margin-top:4vh;">
+      Inflation tends to raise interest rates as Central banks may adjust rates to control inflation, impacting how much consumers can buy with their money.</h3></li>
+    </ul>
+    <h2 style="margin-top: 15vh;">Types of inflation</h2>
+    <h4 style="margin-top: 5vh;">Demand-pull inflation:</h4>
+    <h3>Not enough products or services being produced to keep up with demand, 
+    causing their prices to increase.
+    </h3>
+    <h4>Cost-push inflation:</h4>
+    <h3>Cost of producing products and services rises, forcing businesses to raise their prices.   
+    </h3>
+    <h4>Built-in inflation:</h4>
+    <h3>Demand for higher wages causes businesses to raise their prices in order to offset their rising wage costs.
+    </h3>
+  </div>
+
+  <div id="map-container" class="map-container">
+    <h5>Interactive Map</h5>
+    <div id = "lottie-container2" style="width: 300px; height: 300px;"></div>
+    <h3>This map indicates the top 10 countries impacted by inflation to date.</h3>
+  </div>
+
+  <div id="account-container" class="account-container">
+    <h5>Account</h5>
+    <div id = "lottie-container3" style="width: 300px; height: 300px;"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt magna id odio volutpat, eu fringilla
+      nisi tristique.</p>
+  </div>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const topOffset = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: topOffset - 70,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+  <script>
+    const animationContainer1 = document.getElementById('lottie-container1');
+    const animationData1 = 'https://lottie.host/e8f07b53-339d-4d5b-8885-874be217d759/gJVu4ce1GC.json';
+
+    const animation1 = lottie.loadAnimation({
+      container: animationContainer1,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData1,
+    });
+
+    const animationContainer2 = document.getElementById('lottie-container2');
+    const animationData2 = 'https://lottie.host/37dc955b-047e-4c00-be84-b7061eba8c9f/dWbnlzwzZS.json';
+
+    const animation2 = lottie.loadAnimation({
+      container: animationContainer2,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData2,
+    });
+
+    const animationContainer3 = document.getElementById('lottie-container3');
+    const animationData3 = 'https://lottie.host/846f1af4-9825-4035-902f-986d3ed9e711/OyDcD7M7OG.json';
+
+    const animation3 = lottie.loadAnimation({
+      container: animationContainer3,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData3,
+      speed: 0.5,
+    });
+
+    const animationContainer4 = document.getElementById('lottie-container4');
+    const animationData4 = 'https://lottie.host/3d784ed3-19ce-420c-98e3-5d96008ce722/7KWwRtyQRV.json';
+
+    const animation4 = lottie.loadAnimation({
+      container: animationContainer4,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData4,
+      speed: 0.5,
+    });
+  </script>
 </body>
+
 </html>
