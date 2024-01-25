@@ -18,3 +18,24 @@ svg path:hover{
     transition: 0.6s;
     cursor: pointer;
 }
+
+#name {
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid pink;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#CPI{
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid pink;
+    padding: 5px;
+    font-size: 1.5rem;
+}

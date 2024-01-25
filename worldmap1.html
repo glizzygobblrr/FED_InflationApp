@@ -2,11 +2,69 @@
 <html lang="en">
 <head>
 <title>world map</title>
-<link rel="stylesheet" href="map.css" type="text/css" />
+<!--<link rel="stylesheet" href="map.css" type="text/css" />-->
 </head>
-<body>
 
+<style>
+  *{
+    margin: 0;
+    padding: 0;;
+  }
+
+  body{
+    background-color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  #name{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid pink;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
+  #cpi{
+    background-color: pink;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
+  path {
+    fill: grey;
+  }
+
+  svg path{
+    cursor: pointer;
+  }
+
+  svg path:hover{
+    fill: pink;
+  }
+
+</style>
+
+<body>
+<script>
+    
+
+</script>
 <?xml version="1.0"?>
+
+<div id="name">
+  <p id ="name">Name</p>
+</div>
+
+<div id="rate">
+  <p id ="cpi">CPI</p>
+</div>
+
 <!--
 *************Map created by Simplemaps.com********************		
 *************Attribution is highly appreciated!***************
@@ -1082,4 +1140,21 @@ THE SOFTWARE.
 </svg>
 
 </body>
+
+<script>
+
+async function getData(place){
+  const url = `https://inflation-rate-around-the-world.p.rapidapi.com/g20`;
+
+  const res=await fetch(url)
+  data=await res.json()
+  cpi=data.cpi
+
+  document.getElementById("cpi").innerText=`${place}'s cpi = ${cpi} ${data.cpi}`
+}
+
+document.querySelectorAll(".allPaths")
+
+
+</script>
 </html>
