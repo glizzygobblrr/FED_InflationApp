@@ -80,6 +80,14 @@
     </h3>
   </div>
 
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <h4>Ready to test your knowledge?</h4>
+    <div class="custom-container" onclick="showSegment(1)">
+        <button id="start-quiz-button" style="margin-top: 4vh; width: 200px; height: 50px; border-radius: 10px;"><h3>Start Quiz</h3></button>
+    </div>
+  </div>
+      
+
   <div id="map-container" class="map-container">
     <h5>Interactive Map</h5>
     <div id = "lottie-container2" style="width: 300px; height: 300px;"></div>
@@ -153,6 +161,12 @@
     });
   </script>
 
+<style>
+    #start-quiz-button:hover {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
 
 </body>
 
