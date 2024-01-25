@@ -43,14 +43,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 90vh;
+      height: 85vh;
       margin-top: 100px;
       padding: 15%;
       text-align: center;
     }
 
     .info-container {
-      height: 330vh;
+      height: 350vh;
     }
 
     h1 {
@@ -60,6 +60,8 @@
       position: relative;
       text-align: center;
       text-transform: uppercase;
+      -webkit-text-stroke: 0.1vw grey;
+      white-space: nowrap;
     }
 
     h1::before {
@@ -74,6 +76,7 @@
       overflow: hidden;
       animation: animate 6s linear infinite;
       white-space: nowrap;
+      -webkit-text-stroke: 0.1vw grey;
     }
 
     h2 {
@@ -118,3 +121,12 @@
       margin-top: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
+    #start-quiz-button{
+        background-color:lightgreen
+    }
+
+    #start-quiz-button:hover {
+        background-color: green;
+        color: black;
+      }
