@@ -34,10 +34,10 @@
             <a onclick="scrollToSection('info-container')">Info</a>
           </li>
           <li class="nav-item">
-            <a onclick="scrollToSection('map-container')">Map</a>
+            <a href="worldmap1.html" style ="color: black">Map</a>
           </li>
           <li class="nav-item">
-            <a onclick="scrollToSection('account-container')">Account</a>
+            <a href="login.html" style ="color: black">Account</a>
           </li>
         </ul>
       </div>
@@ -86,20 +86,13 @@
         <button id="start-quiz-button" style="margin-top: 4vh; width: 200px; height: 50px; border-radius: 10px;"><h3>Start Quiz</h3></button>
     </div>
   </div>
-      
 
   <div id="map-container" class="map-container">
     <h5>Interactive Map</h5>
     <div id = "lottie-container2" style="width: 300px; height: 300px;"></div>
     <h3>This map indicates the top 10 countries impacted by inflation to date.</h3>
   </div>
-
-  <div id="account-container" class="account-container">
-    <h5>Account</h5>
-    <div id = "lottie-container3" style="width: 300px; height: 300px;"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt magna id odio volutpat, eu fringilla
-      nisi tristique.</p>
-  </div>
+      
 
   <script>
     function scrollToSection(sectionId) {
@@ -146,20 +139,9 @@
       autoplay: true,
       path: animationData3,
       speed: 0.5,
-    });
-
-    const animationContainer4 = document.getElementById('lottie-container4');
-    const animationData4 = 'https://lottie.host/3d784ed3-19ce-420c-98e3-5d96008ce722/7KWwRtyQRV.json';
-
-    const animation4 = lottie.loadAnimation({
-      container: animationContainer4,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: animationData4,
-      speed: 0.5,
-    });
+    }) ;
   </script>
+  
 
 <style>
     #start-quiz-button:hover {
