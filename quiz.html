@@ -102,6 +102,7 @@ body{
     <h1>Test your knowledge!</h1>
         <div class="quiz">
             <h2 id="question">Question here</h2>
+            <!--Set 2x2 box layout-->
             <div id="answer-buttons" style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
                 <button class = "btn">Answer 1</button>
                 <button class = "btn">Answer 2</button>
@@ -115,6 +116,8 @@ body{
 </body>
 
 <script>
+
+//Inserted Questions and Answers
 const questions = [
     {
         question: "What is inflation?",
@@ -218,18 +221,21 @@ const questions = [
 
 ];
 
+//Access element by using id
 const questionElement = document.getElementById("question");
 const answerBtns = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("next");
 
+//Set variables for Timer
 var timer;
 var timerInterval;
 var timerElement = document.getElementById("timer");
 
+//Reset variables to 0
 let currentQuestionNo = 0;
 let score = 0;
 
-
+//Set function to start quiz
 function startQuiz(){
     currentQuestionNo = 0;
     score = 0;
@@ -240,6 +246,7 @@ function startQuiz(){
     displayQns();
 }
 
+//Set function to activate timer
 function Timer(){
     var sec = 0;
     timerInterval = setInterval(() => {
@@ -248,29 +255,34 @@ function Timer(){
     }, 1000)
 }
 
+//Set function to display questions
 function displayQns(){
-    Reset();
-    let currentQuestion = questions[currentQuestionNo];
-    let questionNo = currentQuestionNo + 1;
+    Reset(); //Reset before displaying new questions
+    let currentQuestion = questions[currentQuestionNo]; //Retrieving questions
+    let questionNo = currentQuestionNo + 1; //Setting index
     questionElement.innerHTML = questionNo + ". " + currentQuestion.
     question;
 
+    //Display answer for each question
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerBtns.appendChild(button);
-        if(answer.correct){
+
+        //Verifying correct answer
+        if(answer.correct){ 
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener("click", selectAnswer); //Display answer when clicked
 
         if (questionNo === 1){
-            button.addEventListener("click", Timer);
+            button.addEventListener("click", Timer); //Start timing when clicked
         }
     });
 }
 
+//Set function to reset every question
 function Reset(){
     nextBtn.style.display = "none";
     while(answerBtns.firstChild){
@@ -278,48 +290,58 @@ function Reset(){
     }
 } 
 
+//Set function to add to list everytime an answer is selected
 function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
 
+    //if its correct, add into list and increment score
     if(isCorrect){
         selectedBtn.classList.add("correct");
         score++;
     }
 
+    //if its wrong, add into list, doesn't affect score
     else{
         selectedBtn.classList.add("wrong");
     }
+
+    //For each questions, if its true, add to correct list and enable the next button.
     Array.from(answerBtns.children).forEach(button => {
         if (button.dataset.correct === "true"){
             button.classList.add("correct");
         }
         button.disabled = true;
     })
-    nextBtn.style.display = "block";
+    nextBtn.style.display = "block"; //display next button
 }
 
+//Function to display the score from incrementing correct answer
 function displayScore(){
-    Reset();
+    Reset(); //Reset before displaying new questions
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextBtn.innerHTML = "Try Again";
     nextBtn.style.display = "block";
-    clearInterval(timerInterval);
+    clearInterval(timerInterval); //Stops the timer from running
 
 }
 
+//Function to navigate questions
 function handleNextButton(){
-    currentQuestionNo++
+    currentQuestionNo++ //increase question index
+
+    //continue running question until end of questions
     if (currentQuestionNo < questions.length){
         displayQns();
     }
 
+    //if end of questions, display score
     else{
         displayScore();
     }
 }
 
-
+//When next button is clicked, display question
 nextBtn.addEventListener("click", ()=>{
     if(currentQuestionNo < questions.length){
         handleNextButton();
@@ -330,6 +352,7 @@ nextBtn.addEventListener("click", ()=>{
     }
 })
 
+//To start the loop
 startQuiz();
 </script>
 </html>

@@ -62,11 +62,12 @@
 
     <?xml version="1.0"?>
 
+    <!--Display country-->
     <div id="name">
         <p id="name">Name</p>
     </div>
 
-
+    <!--Retrieve SVG Map-->
     <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round"
         version="1.2" viewbox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
         <path class="allPaths"
@@ -1597,8 +1598,7 @@
         </circle>
     </svg>
 
-    
-
+    <!--Display CPI informations-->
     <div id="rate">
         <p id="cpi">CPI</p>
     </div>
@@ -1617,9 +1617,10 @@ headers: {
 }
 };
 
-//Fetching API
+//Listing countries available for API Fetching
 const countries = ["Austria", "Belgium", "Canada", "Chile", "Estonia", "Germany", "Hungary", "Iceland", "Ireland", "Mexico", "Norway", "Portugal", "Russia", "Slovakia", "Sweden", "Switzerland", "The Netherlands"];
 
+//Fetching API
 async function getCountry(country) {
     try {
 
