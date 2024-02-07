@@ -43,13 +43,13 @@
       align-items: center;
       justify-content: center;
       height: 85vh;
-      margin-top: 100px;
+      margin-top: 95px;
       padding: 15%;
       text-align: center;
     }
 
     .info-container {
-      height: 300vh;
+      height: 380vh;
     }
 
     h1 {

@@ -53,12 +53,11 @@
 
   <div id="info-container" class="info-container">
     <h5>Information</h5>
-    <div id="lottie-container1" style="width: 300px; height: 300px; margin-top: 4vh;"></div>
-    <h2 style="margin-top: 15vh;">What is Inflation?</h2>
+    <div id="lottie-container1" style="width: 400px; height: 400px; margin-top: 4vh;"></div>
+    <h2 style="margin-top: 10vh;">What is Inflation?</h2>
     <h3>Inflation is the rate of increase in prices over 
     a given period of time. It is typically a broad measure, such 
     as the overall increase in prices or the increase in the cost of living in a country.</h3>
-    <div id = "lottie-container4" style="width: 300px; height: 300px;"></div>
     <h2 style="margin-top: 15vh;">Causes of Inflation</h2>
     <h3>When demand for goods and services outpaces the available supply, 
     availability of certain goods and services becomes constrained,
@@ -69,6 +68,9 @@
       <li><h3 style="margin-top:4vh;">
       Inflation tends to raise interest rates as Central banks may adjust rates to control inflation, impacting how much consumers can buy with their money.</h3></li>
     </ul>
+
+    <div id = "lottie-container4" style="width: 300px; height: 300px; margin-top: 10vh;"></div>
+
     <h2 style="margin-top: 15vh;">Types of inflation</h2>
     <h4 style="margin-top: 5vh;">Demand-pull inflation:</h4>
     <h3>Not enough products or services being produced to keep up with demand, 
@@ -80,7 +82,15 @@
     <h4>Built-in inflation:</h4>
     <h3>Demand for higher wages causes businesses to raise their prices in order to offset their rising wage costs.
     </h3>
+    <h2 style="margin-top: 15vh;">How is inflation measured?</h2>
+    <h3>
+      The Consumer Price Index (CPI) is a key measure of inflation, tracking price changes for 
+      essential goods and services like food, transportation, and medical care among urban consumers.
+      It compares current prices to those from a base year to assess inflation trends.
+    </h3>
   </div>
+
+  <div id = "lottie-container5" style="width: 300px; height: 300px;"></div>
 
   <div class="custom-container">
     <h2>Ready to test your knowledge?</h2>
@@ -104,7 +114,7 @@
   <div id="map-container" class="map-container">
     <h5>Interactive Map</h5>
     <div id = "lottie-container2" style="width: 300px; height: 300px;"></div>
-    <h3>This map indicates the top 10 countries impacted by inflation to date.</h3>
+    <h3>Click on a few of the countries to check out their Consumer Price Index (CPI)!</h3>
   </div>
 
   <?xml version="1.0"?>
@@ -1887,7 +1897,7 @@
     
   <script>
     const animationContainer1 = document.getElementById('lottie-container1');
-    const animationData1 = 'https://lottie.host/e8f07b53-339d-4d5b-8885-874be217d759/gJVu4ce1GC.json';
+    const animationData1 = 'https://lottie.host/f4608271-1ff6-4016-87ce-a7fc71093534/tozNwgzC1Q.json';
 
     const animation1 = lottie.loadAnimation({
       container: animationContainer1,
@@ -1917,6 +1927,30 @@
       loop: true,
       autoplay: true,
       path: animationData3,
+      speed: 0.5,
+    }) ;
+
+    const animationContainer4 = document.getElementById('lottie-container4');
+    const animationData4 = 'https://lottie.host/ced46f6d-5c84-450a-afd1-20a67568c734/pVzzr1Xnfd.json';
+
+    const animation4 = lottie.loadAnimation({
+      container: animationContainer4,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData4,
+      speed: 0.5,
+    }) ;
+
+    const animationContainer5 = document.getElementById('lottie-container5');
+    const animationData5 = 'https://lottie.host/b8267e94-5051-4d7b-be4f-60e8b6fb9163/QZG6KoRNwb.json';
+
+    const animation5 = lottie.loadAnimation({
+      container: animationContainer5,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData5,
       speed: 0.5,
     }) ;
   </script>
