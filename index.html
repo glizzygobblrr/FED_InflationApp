@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.js"></script>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="map.css"/>
+  <link rel="stylesheet" href="quiz.css"/>
   
 </head>
 
@@ -1654,233 +1655,17 @@
         </circle>
     </svg>
 
+    <!--Map JS-->
     <script src ="map.js"></script>
 
     <div id="rate">
         <p id="cpi">Consumer Price Index (CPI)</p>
     </div>
   
-  <script>
-    const questions = [
-        {
-            question: "What is inflation?",
-            answers: [
-                { text: "Decrease in the general price level", correct: false},
-                { text: "Increase in the general price level", correct: true},
-                { text: "No change in the general price level", correct: false},
-                { text: "Increase in unemployment rate", correct: false},
-            ]
-        },
-    
-        {
-            question: "How did inflation happen?",
-            answers: [
-                { text: "Overwhelming Supply, Limited Demand", correct: false},
-                { text: "Overwhelming Demand, Limited Supply", correct: true},
-                { text: "Natural disaster disrupts supply chain, Increases demands", correct: false},
-                { text: "Increases taxes automatically leads to inflation", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is the opposite of inflation?",
-            answers: [
-                { text: "Stagflation", correct: false},
-                { text: "Hyperinflation", correct: false},
-                { text: "Deflation", correct: true},
-                { text: "Disinflation", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is cost-push inflation caused by?",
-            answers: [
-                { text: "Increase in consumer spending", correct: false},
-                { text: "Decrease in production costs", correct: false},
-                { text: "Decrease in aggregate demand", correct: false},
-                { text: "Increase in production costs", correct: true},
-            ]
-        },
-    
-        {
-            question: "What is CPI?",
-            answers: [
-                { text: "Consumer Price Index", correct: true},
-                { text: "Cost Price Inflation", correct: false},
-                { text: "Cost Percentage Increase", correct: false},
-                { text: "Charge Penalty Inflation", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is Consumer Price Index (CPI) used for?",
-            answers: [
-                { text: "Measure of economic growth", correct: false},
-                { text: "Measure of income inequality", correct: false},
-                { text: "Measure of inflation", correct: true},
-                { text: "Measure of unemployment rate", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is the impact of hyperinflation?",
-            answers: [
-                { text: "Increase in purchasing power", correct: false},
-                { text: "Decrease in uncertainty", correct: false},
-                { text: "Collapse in currency", correct: true},
-                { text: "Increase in savings", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is demand-pull inflation caused by?",
-            answers: [
-                { text: "Increase in consumer spending", correct: false},
-                { text: "Decrease in production costs", correct: false},
-                { text: "Decrease in aggregate demand", correct: false},
-                { text: "Increase in product prices", correct: true},
-            ]
-        },
-    
-        {
-            question: "What is built-in inflation caued by?",
-            answers: [
-                { text: "Increase in wage cost", correct: true},
-                { text: "Decrease in production costs", correct: false},
-                { text: "Decrease in aggregate demand", correct: false},
-                { text: "Increase in product prices", correct: false},
-            ]
-        },
-    
-        {
-            question: "What is the difference between anticipated and unanticipated inflation?",
-            answers: [
-                { text: "Anticipated is constant, unanticipated is volatile", correct: false},
-                { text: "Anticipated is expected, unanticipated is unexpected", correct: true},
-                { text: "Anticipated is controlled, unanticipated is market-driven", correct: false},
-                { text: "Anticipated affects certain goods, unanticipated affects all goods", correct: false},
-            ]
-        }
-    
-    ];
-    
-    const questionElement = document.getElementById("question");
-    const answerBtns = document.getElementById("answer-buttons");
-    const nextBtn = document.getElementById("next");
-    
-    var timer;
-    var timerInterval;
-    var timerElement = document.getElementById("timer");
-    
-    let currentQuestionNo = 0;
-    let score = 0;
-    
-    
-    function startQuiz(){
-        currentQuestionNo = 0;
-        score = 0;
-        timerInterval = null;
-        sec = 0;
-        timerElement.innerHTML = "00:00";
-        nextBtn.innerHTML = "Next";
-        displayQns();
-    }
-    
-    function Timer(){
-        var sec = 0;
-        timerInterval = setInterval(() => {
-            timerElement.innerHTML = "00:" + sec;
-            sec ++;
-        }, 1000)
-    }
-    
-    function displayQns(){
-        Reset();
-        let currentQuestion = questions[currentQuestionNo];
-        let questionNo = currentQuestionNo + 1;
-        questionElement.innerHTML = questionNo + ". " + currentQuestion.
-        question;
-    
-        currentQuestion.answers.forEach(answer => {
-            const button = document.createElement("button");
-            button.innerHTML = answer.text;
-            button.classList.add("btn");
-            answerBtns.appendChild(button);
-            if(answer.correct){
-                button.dataset.correct = answer.correct;
-            }
-            button.addEventListener("click", selectAnswer);
-    
-            if (questionNo === 1){
-                button.addEventListener("click", Timer);
-            }
-        });
-    }
-    
-    function Reset(){
-        nextBtn.style.display = "none";
-        while(answerBtns.firstChild){
-            answerBtns.removeChild(answerBtns.firstChild);
-        }
-    } 
-    
-    function selectAnswer(e){
-        const selectedBtn = e.target;
-        const isCorrect = selectedBtn.dataset.correct === "true";
-    
-        if(isCorrect){
-            selectedBtn.classList.add("correct");
-            score++;
-        }
-    
-        else{
-            selectedBtn.classList.add("wrong");
-        }
-        Array.from(answerBtns.children).forEach(button => {
-            if (button.dataset.correct === "true"){
-                button.classList.add("correct");
-            }
-            button.disabled = true;
-        })
-        nextBtn.style.display = "block";
-    }
-    
-    function displayScore(){
-        Reset();
-        questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-        nextBtn.innerHTML = "Try Again";
-        nextBtn.style.display = "block";
-        clearInterval(timerInterval);
-    
-    }
-    
-    function handleNextButton(){
-        currentQuestionNo++
-        if (currentQuestionNo < questions.length){
-            displayQns();
-        }
-    
-        else{
-            displayScore();
-        }
-    }
-    
-    
-    nextBtn.addEventListener("click", ()=>{
-        if(currentQuestionNo < questions.length){
-            handleNextButton();
-        }
-    
-        else{
-            startQuiz();
-        }
-    })
-    
-    startQuiz();
-    </script>
+  <!--Quiz JS-->
+  <script src = "quiz.js"></script>
 
-      
-
+  <!--Scroll JS-->
   <script>
     function scrollToSection(sectionId) {
       const section = document.getElementById(sectionId);
@@ -1894,7 +1679,7 @@
     }
   </script>
     
-    
+  <!--Lottie JS-->
   <script>
     const animationContainer1 = document.getElementById('lottie-container1');
     const animationData1 = 'https://lottie.host/f4608271-1ff6-4016-87ce-a7fc71093534/tozNwgzC1Q.json';
