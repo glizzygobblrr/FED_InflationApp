@@ -17,12 +17,9 @@ The original idea was to keep the website simple and plain. In the wireframe, we
 - Lottie Animation to attract attention
 
 ## Existing Features
--- Explain existing features --
 - Map: Created using SVG image and multiple effects to make the map look fun and interactive so that users can navigate it easily.
 - Quiz: Created using basic HTML CSS and JS, to see how well users understand the information we provided.
-
-## Features left to implement
-- Login Page
+- Account: Created using basic HTML CSS and JS, for users to keep track of updates on our website.
 
 ## Technologies Used
 - Implemented HTML, CSS and Javascript for every webpage.
@@ -30,13 +27,9 @@ The original idea was to keep the website simple and plain. In the wireframe, we
 - Implemented SVG image for the navigation map.
 - Implemented bold fonts to look clean.
 
-e.g:
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
- 
 ## Testing 
 1. Navigation Map:
-    1. Go to the "Map" page
+    1. Click on "Map" from the navigation bar.
     2. Try hovering around the map, and see if the hovered map turns white.
     3. Try to hover over any part of the map, and see if the country's name appears.
     4. Try to click on any part of the map, and see if the output gives invalid data or information about the country.
@@ -53,6 +46,13 @@ e.g:
     7. Try completing the quiz, and see if the score appears to be true.
     8. Try completing the quiz, and see if the timer stops.
     9. Try clicking on try again, and see if it resets questions and timer.
+  
+3. Account:
+   1. Click on "Account" from the navigation bar.
+   2. Try writing on any input box.
+   3. Try checking "Remember me"
+   4. Try clicking "Send", and see if content is successfully recorded.
+   5. Try clicking the "Register" link, it should stay on the same page.
        
 
 ### Project on different browsers and screen sizes
@@ -65,12 +65,11 @@ e.g:
 - Quiz: The original idea was what it looked like, to display multiple-choice questions and throw colors to indicate whether if answer is right or wrong. However, we found out that some answers can be repeatedly selected in the same question, hence we used the no-drop function on the cursor to prevent it. We also realised that questions can be skipped without selecting an answer by clicking on the "Next" button, hence we implemented the "nextBtn" display to none when a new question comes out, and to block when an answer is selected.
   
 ## Credits
-e.g:
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-- The navigation bar is taken from [BootStrap]()
-- The Lottie's animation is taken from
-- The font for index.html is taken from [Cloudflare]()
-  
+- The navigation bar is taken from [BootStrap](https://getbootstrap.com/docs/5.0/components/navbar/)
+- The Lottie's animation is taken from [LottieFiles](https://lottiefiles.com/animations/reading-book-BCMBGK4iag)
+- The font for index.html is taken from [Google Fonts](https://fonts.google.com/specimen/Poppins)
+- HTML, CSS and Javascript are referenced from [ChatGPT](https://chat.openai.com/)
 ### Media
 - The SVG image used in "Map" was obtained from https://simplemaps.com/static/demos/resources/svg-library/svgs/world.svg
 
