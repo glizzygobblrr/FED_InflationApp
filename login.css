@@ -1,0 +1,58 @@
+
+.wrapper{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background: darkcyan;
+    border-radius: 1rem;
+    color: black;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper p{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#add-contact-form{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.input-box{
+    margin-bottom: 20px;;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+
+.form-text .text-muted{
+    color: black;
+}
+
+#contact-submit{
+    margin-left: 200px;
+    margin-bottom: 20px;
+    width: 60px;
+}
+
+.register{
+    text-align: center;
+}
+
+.small, small{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+label{
+    font-family: sans-serif;
+}
