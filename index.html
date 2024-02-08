@@ -12,17 +12,17 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.js"></script>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="map.css"/>
-  <link rel="stylesheet" href="quiz.css"/>
-  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="map.css" />
+  <link rel="stylesheet" href="quiz.css" />
+
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-white fixed-top">
     <div class="container-fluid">
       <div class="nav-section left">
-        <div class="navbar-brand" href="#" style="font-size: 30px; margin-left:10px;">INFLATION ATLAS</div>
+        <div class="navbar-brand" href="#" style="font-size: 30px; margin-left: 10px;">INFLATION ATLAS</div>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
             <a onclick="scrollToSection('map-container')">Map</a>
           </li>
           <li class="nav-item">
-            <a href="login.html" style ="color: black">Account</a>
+            <a href="login.html" style="color: black">Account</a>
           </li>
         </ul>
       </div>
@@ -49,80 +49,109 @@
 
   <div id="ds-container" class="ds-container">
     <h1 data-text="Dollars & Sense">Dollars & Sense</h1>
+    <div>
+      <h3>A WEE LIANG PRODUCTION</h3>
     </div>
   </div>
 
   <div id="info-container" class="info-container">
     <h5>Information</h5>
-    <div id="lottie-container1" style="width: 400px; height: 400px; margin-top: 4vh;"></div>
-    <h2 style="margin-top: 10vh;">What is Inflation?</h2>
-    <h3>Inflation is the rate of increase in prices over 
-    a given period of time. It is typically a broad measure, such 
-    as the overall increase in prices or the increase in the cost of living in a country.</h3>
+    <div id="lottie-container1" class="lottie-container"></div>
+    <h2>What is Inflation?</h2>
+    <h3>Inflation is the rate of increase in prices over a given period of time. It is typically a broad measure,
+      such as the overall increase in prices or the increase in the cost of living in a country.</h3>
     <h2 style="margin-top: 15vh;">Causes of Inflation</h2>
-    <h3>When demand for goods and services outpaces the available supply, 
-    availability of certain goods and services becomes constrained,
-    resulting in inflationary pressures.</h3>
+    <h3>When demand for goods and services outpaces the available supply, availability of certain goods and services
+      becomes constrained, resulting in inflationary pressures.</h3>
     <h2 style="margin-top: 15vh;">Effects of Inflation</h2>
     <ul>
-      <li><h3>The rise in prices over time reduces the purchasing power of consumers since a fixed amount of money will afford progressively less consumption.</h3></li>
-      <li><h3 style="margin-top:4vh;">
-      Inflation tends to raise interest rates as Central banks may adjust rates to control inflation, impacting how much consumers can buy with their money.</h3></li>
+      <li>
+        <h3>The rise in prices over time reduces the purchasing power of consumers since a fixed amount of money will
+          afford progressively less consumption.</h3>
+      </li>
+      <li>
+        <h3 style="margin-top:4vh;">
+          Inflation tends to raise interest rates as Central banks may adjust rates to control inflation, impacting how
+          much consumers can buy with their money.</h3>
+      </li>
     </ul>
 
-    <div id = "lottie-container4" style="width: 300px; height: 300px; margin-top: 10vh;"></div>
+    <div id="lottie-container4" class="lottie-container"></div>
 
-    <h2 style="margin-top: 15vh;">Types of inflation</h2>
+    <h2>Types of inflation</h2>
     <h4 style="margin-top: 5vh;">Demand-pull inflation:</h4>
-    <h3>Not enough products or services being produced to keep up with demand, 
-    causing their prices to increase.
+    <h3>Not enough products or services being produced to keep up with demand, causing their prices to increase.
     </h3>
     <h4>Cost-push inflation:</h4>
-    <h3>Cost of producing products and services rises, forcing businesses to raise their prices.   
+    <h3>Cost of producing products and services rises, forcing businesses to raise their prices.
     </h3>
     <h4>Built-in inflation:</h4>
     <h3>Demand for higher wages causes businesses to raise their prices in order to offset their rising wage costs.
     </h3>
-    <h2 style="margin-top: 15vh;">How is inflation measured?</h2>
+    <h2>How is inflation measured?</h2>
     <h3>
-      The Consumer Price Index (CPI) is a key measure of inflation, tracking price changes for 
-      essential goods and services like food, transportation, and medical care among urban consumers.
-      It compares current prices to those from a base year to assess inflation trends.
+      The Consumer Price Index (CPI) is a key measure of inflation, tracking price changes for essential goods and
+      services like food, transportation, and medical care among urban consumers. It compares current prices to those
+      from a base year to assess inflation trends.
     </h3>
   </div>
 
-  <div id = "lottie-container5" style="width: 300px; height: 300px;"></div>
+  <div id="lottie-container5" class="lottie-container"></div>
 
   <div class="custom-container">
     <h2>Ready to test your knowledge?</h2>
   </div>
 
   <div class="container">
-    <div id = "timer">00:00</div>
-        <div class="quiz">
-            <h2 id="question">Question here</h2>
-            <div id="answer-buttons" style = "display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
-                <button class = "btn">Answer 1</button>
-                <button class = "btn">Answer 2</button>
-                <button class = "btn">Answer 3</button>
-                <button class = "btn">Answer 4</button>
-            </div>
-        </div>
-        <button id="next">Next</button>
+    <div id="timer">00:00</div>
+    <div class="quiz">
+      <h2 id="question">Question here</h2>
+      <div id="answer-buttons" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+    </div>
+    <button id="next">Next</button>
+  </div>
+
+  <h2>Recent News Articles</h2>
+  <div class="news-container" id="newsContainer">
+    <div class="news-item" onclick="openLink('https://www.jpmorgan.com/insights/global-research/economy/global-inflation-forecast')">
+      <img src="https://www.jpmorgan.com/content/dam/jpm/cib/complex/content/research/global_inflation_2024/Inflation_Header_Image.svg" alt="News Image">
+      <h3>Global Inflation Forecast 2024</h3>
+    </div>
+    <div class="news-item" onclick="openLink('https://www.wsj.com/articles/bank-of-thailand-keeps-policy-rate-unchanged-as-inflation-eases-d5a50e38')">
+      <img src="https://images.wsj.net/im-922270?width=700&size=1.5005861664712778" alt="News Image">
+      <h3>Bank of Thailand Keeps Policy Rate Unchanged as Inflation Eases</h3>
+    </div>
+    <div class="news-item" onclick="openLink('https://www.bloomberg.com/news/articles/2024-02-05/turkish-inflation-upswing-to-test-resolve-of-new-central-banker')">
+      <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ietw_iMx5wn0/v0/1800x1201.jpg" alt="News Image">
+      <h3>Turkish Inflation Upswing to Test Resolve of New Central Banker</h3>
+    </div>
+    <div class="news-item" onclick="openLink('https://www.scmp.com/economy/economic-indicators/article/3251324/china-inflation-consumer-prices-fall-fourth-straight-month-january-adding-deflation-concerns')">
+      <img src="https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2024/02/08/742806e0-9fc3-4253-a5ea-071da2f47aae_7cb24801.jpg?itok=5gnid1yz&v=1707356487" alt="News Image">
+      <h3>China’s deflationary risks take root as consumer prices suffer steep fall</h3>
+    </div>
+    <div class="news-item" onclick="openLink('https://www.channelnewsasia.com/business/philippine-finance-secretary-does-not-expect-rate-hike-inflation-easing-4109881')">
+      <img src="https://onecms-res.cloudinary.com/image/upload/s--wq8xKiSe--/c_fill,g_auto,h_468,w_830/fl_relative,g_south_east,l_one-cms:core:watermark:reuters,w_0.1/f_auto,q_auto/v1/one-cms/core/2024-02-08t093835z_2_lynxmpek170aj_rtroptp_3_philippines-economy-rates.jpg?itok=iy2QKaOP" alt="News Image">
+      <h3>Philippine finance secretary does not expect rate hike as inflation easing</h3>
     </div>
   </div>
 
   <div id="map-container" class="map-container">
     <h5>Interactive Map</h5>
-    <div id = "lottie-container2" style="width: 300px; height: 300px;"></div>
+    <div id="lottie-container2" class="lottie-container"></div>
     <h3>Click on a few of the countries to check out their Consumer Price Index (CPI)!</h3>
   </div>
 
-  <?xml version="1.0"?>
+  
 
-    <div id="name">
-        <p id="name">Name</p>
-    </div>
+  <?xml version="1.0"?>
+  <div id="name">
+    <p id="name">Name</p>
+  </div>
 
 
     <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round"
@@ -1738,6 +1767,45 @@
       path: animationData5,
       speed: 0.5,
     }) ;
+  </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('newsContainer');
+      const newsItems = document.querySelectorAll('.news-item');
+      const cloneNewsItems = Array.from(newsItems).map(newsItem => newsItem.cloneNode(true));
+  
+
+      cloneNewsItems.forEach(clone => container.appendChild(clone));
+  
+
+      let scrollAmount = 1;
+      const delay = 50; 
+      let scrollInterval; 
+  
+      function startScroll() {
+        scrollInterval = setInterval(() => {
+          container.scrollLeft += scrollAmount;
+          if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
+            container.scrollLeft = 0;
+            container.appendChild(container.firstElementChild.cloneNode(true)); 
+          }
+        }, delay);
+      }
+  
+      function stopScroll() {
+        clearInterval(scrollInterval);
+      }
+  
+      container.addEventListener('mouseenter', stopScroll);
+      container.addEventListener('mouseleave', startScroll);
+  
+      startScroll();
+    });
+  
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
   </script>
 
 </body>
