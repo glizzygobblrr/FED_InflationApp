@@ -74,9 +74,7 @@ function scrollToSection(sectionId) {
     const newsItems = document.querySelectorAll('.news-item');
     const cloneNewsItems = Array.from(newsItems).map(newsItem => newsItem.cloneNode(true));
 
-
     cloneNewsItems.forEach(clone => container.appendChild(clone));
-
 
     let scrollAmount = 1;
     const delay = 50; 
@@ -85,8 +83,12 @@ function scrollToSection(sectionId) {
     function startScroll() {
       scrollInterval = setInterval(() => {
         container.scrollLeft += scrollAmount;
-        if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
-          container.scrollLeft = 0;
+        if (container.scrollLeft >= (container.scrollWidth - container.clientWidth) / 2) {
+
+          container.removeChild(container.firstElementChild);
+
+          container.scrollLeft -= container.firstElementChild.offsetWidth;
+
           container.appendChild(container.firstElementChild.cloneNode(true)); 
         }
       }, delay);
@@ -100,8 +102,8 @@ function scrollToSection(sectionId) {
     container.addEventListener('mouseleave', startScroll);
 
     startScroll();
-  });
+});
 
-  function openLink(url) {
-    window.open(url, '_blank');
-  }
+function openLink(url) {
+  window.open(url, '_blank');
+}
