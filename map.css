@@ -1,34 +1,26 @@
 body {
-    overflow-x: auto;
-    overflow-y: auto;
+overflow-x : auto;
+overflow-y : auto;
 }
-
 #name {
-    position: auto;
-    width: fit-content;
-    opacity: 0;
-    border-radius: 5px;
-    border: 3px solid solid pink;
-    padding: 5px;
-    font-size: 40px;
-
+width : fit-content;
+opacity : 0;
+border-radius : 5px;
+padding : 5px;
+font-size : 40px;
 }
-
-
-#cpi{
-    background-color: pink;
-    width: fit-content;
-    font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 5vh;
-    margin-bottom: 7vh;
+#cpi {
+background-color : pink;
+width : fit-content;
+font-size : 1.5rem;
+padding : 10px;
+border-radius : 5px;
+margin-top : 5vh;
+margin-bottom : 7vh;
 }
-
 svg path {
-    cursor: pointer;
+cursor : pointer;
 }
-
-svg path:hover{
-    fill: lightpink;
+svg path:hover {
+fill : lightpink;
 }
