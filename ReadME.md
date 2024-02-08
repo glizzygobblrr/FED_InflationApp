@@ -57,7 +57,6 @@ The original idea was to keep the website simple and plain. In the wireframe, we
 
 ### Project on different browsers and screen sizes
 - On Laptop/Computer: The website looks minimalistic and has plenty of space, not bounded by large font and Lottie's animation. However, some devices might find the navigation map hard to view.
-- On mobile:
 
 ### Interesting problems during the testing 
 - Navigation Map: The original idea was to simply display the country's name and CPI when hovered over any part of the map. Turns out it couldn't work as we cannot link the API information on the information box. Hence, we decided to implement it on another box instead, which would be a better fit because it is large enough to provide all the information. The hardest part was when we figured out the reason why so many countries are invalid as the API server only provides API to certain countries for non-premium users, hence explain why only a selected few countries are valid data.
