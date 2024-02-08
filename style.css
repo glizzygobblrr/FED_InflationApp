@@ -145,14 +145,14 @@ h5 {
   display: flex;
   overflow-x: hidden;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: white;
   scroll-behavior: smooth;
 }
 
 .news-item {
   flex-shrink: 0;
   margin-right: 20px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 20px;
   max-width: 300px;
   overflow: hidden;
