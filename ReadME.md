@@ -65,11 +65,26 @@ The original idea was to keep the website simple and plain. In the wireframe, we
 - Quiz: The original idea was what it looked like, to display multiple-choice questions and throw colors to indicate whether if answer is right or wrong. However, we found out that some answers can be repeatedly selected in the same question, hence we used the no-drop function on the cursor to prevent it. We also realised that questions can be skipped without selecting an answer by clicking on the "Next" button, hence we implemented the "nextBtn" display to none when a new question comes out, and to block when an answer is selected.
   
 ## Credits
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 - The navigation bar is taken from [BootStrap](https://getbootstrap.com/docs/5.0/components/navbar/)
-- The Lottie's animation is taken from [LottieFiles](https://lottiefiles.com/animations/reading-book-BCMBGK4iag)
+- The Lottie's animation is taken from https://lottiefiles.com/
+  1. https://lottiefiles.com/animations/reading-book-BCMBGK4iag
+  2. https://lottiefiles.com/animations/money-money-money-S23a9Fs4Nk
+  3. https://lottiefiles.com/animations/yellow-quiz-NvMT87O2kL
 - The font for index.html is taken from [Google Fonts](https://fonts.google.com/specimen/Poppins)
 - HTML, CSS and Javascript are referenced from [ChatGPT](https://chat.openai.com/)
+
 ### Media
 - The SVG image used in "Map" was obtained from https://simplemaps.com/static/demos/resources/svg-library/svgs/world.svg
+- The news in "Recent News Articles" from
+  1. https://www.jpmorgan.com/insights/global-research/economy/global-inflation-forecast'
+  2. https://www.jpmorgan.com/content/dam/jpm/cib/complex/content/research/global_inflation_2024/Inflation_Header_Image.svg
+  3. https://www.wsj.com/articles/bank-of-thailand-keeps-policy-rate-unchanged-as-inflation-eases-d5a50e38
+  4. https://images.wsj.net/im-922270?width=700&size=1.5005861664712778
+  5. https://www.bloomberg.com/news/articles/2024-02-05/turkish-inflation-upswing-to-test-resolve-of-new-central-banker
+  6. https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ietw_iMx5wn0/v0/1800x1201.jpg
+  7. https://www.scmp.com/economy/economic-indicators/article/3251324/china-inflation-consumer-prices-fall-fourth-straight-month-january-adding-deflation-concerns
+  8. https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2024/02/08/742806e0-9fc3-4253-a5ea-071da2f47aae_7cb24801.jpg?itok=5gnid1yz&v=1707356487
+  9. https://www.channelnewsasia.com/business/philippine-finance-secretary-does-not-expect-rate-hike-inflation-easing-4109881
+  10. https://onecms-res.cloudinary.com/image/upload/s--wq8xKiSe--/c_fill,g_auto,h_468,w_830/fl_relative,g_south_east,l_one-cms:core:watermark:reuters,w_0.1/f_auto,q_auto/v1/one-cms/core/2024-02-08t093835z_2_lynxmpek170aj_rtroptp_3_philippines-economy-rates.jpg?itok=iy2QKaOP
+  
 
