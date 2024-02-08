@@ -38,7 +38,7 @@ nav a:hover {
 .ds-container,
 .info-container,
 .map-container,
-.account-container {
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,9 +49,12 @@ nav a:hover {
   text-align: center;
 }
 
+
 .info-container {
   height: 380vh;
 }
+
+
 
 h1 {
   font-size: 6em;
