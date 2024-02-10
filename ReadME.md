@@ -70,7 +70,6 @@ The original idea was to keep the website simple and plain. In the wireframe, we
   2. https://lottiefiles.com/animations/money-money-money-S23a9Fs4Nk
   3. https://lottiefiles.com/animations/yellow-quiz-NvMT87O2kL
 - The font for index.html is taken from [Google Fonts](https://fonts.google.com/specimen/Poppins)
-- HTML, CSS and Javascript are referenced from [ChatGPT](https://chat.openai.com/)
 
 ### Media
 - The SVG image used in "Map" was obtained from https://simplemaps.com/static/demos/resources/svg-library/svgs/world.svg
